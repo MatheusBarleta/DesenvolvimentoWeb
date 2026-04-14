@@ -1,0 +1,133 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Modificado de 'body' para '#root' para o Grid funcionar no React */
+@media (max-width: 600px) {
+    #root {
+        display: grid;
+        grid-template-areas: "header" "main" "aside" "footer";
+    }
+}
+
+@media (min-width: 601px) {
+    #root {
+        display: grid;
+        grid-template-areas: "header header" "aside main" "footer footer";
+        grid-template-columns: 200px 1fr;
+        min-height: 100vh;
+    }
+}
+
+body {
+    background-color: #22252C;
+}
+
+header {
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #2C303A;
+}
+
+header ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none; /* Ajuste para remover as bolinhas da lista */
+}
+
+header a {
+    text-decoration: none;
+    color: #e2e2e2;
+    padding: 0.5rem 1rem;
+    background-color: #666D73;
+    border-radius: 0.5rem;
+}
+
+header a:hover {
+    background-color: #0366D6;
+    transition: 0.5s;
+}
+
+h1 {
+    color: #e2e2e2;
+}
+
+main {
+    display: flex;
+    grid-area: main;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #717B85;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    width: 30rem;
+    gap: 12px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #e2e2e2;
+}
+
+article time, article p {
+    color: #959DA5;
+}
+
+article img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+figcaption {
+    color: #666D73;
+}
+
+aside {
+    grid-area: aside;
+    padding: 1rem;
+    background-color: #191d23;
+}
+
+aside h3 {
+    color: #e2e2e2;
+    margin-bottom: 1rem;
+}
+
+aside ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+aside a {
+    text-decoration: none;
+    color: #e2e2e2;
+}
+
+aside a:hover {
+    color: #0366D6;
+    transition: 0.5s;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+footer p {
+    color: #959DA5;
+}
